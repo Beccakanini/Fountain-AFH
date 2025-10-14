@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fountain Adult FH</title>
+  <link rel="stylesheet" href="output.css" />
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet"/>
+  <style>
+    /* angled bottom clip effect */
+    .clip-bottom {
+      clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    }
+  </style>
+</head>
+<body class="font-montserrat bg-white">
+
+
+<!-- ✅ Combined Fixed Header -->
+<header id="navbar" class="fixed top-0 left-0 w-full z-50 bg-white shadow-md transition-all duration-500">
+  <!-- ✅ Top Bar -->
+  <div class="w-full bg-white text-sm sm:text-base font-light font-montserrat text-gray-600 py-2 px-4 md:px-8 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-3 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-phone text-[#CD7241]"></i>
+        <a href="tel:+254796419278" class="hover:text-[#CD7241] transition"> +254 796 419 278</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-location-dot text-[#CD7241]"></i>
+        <span>Tacoma, Lakewood WA</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-envelope text-[#CD7241]"></i>
+        <a href="mailto:info@fountainafh.com" class="hover:text-[#CD7241] transition">info@fountainafh.com</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Navbar -->
+  <div class="w-full bg-[#FFD0A8] shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+      <div class="flex items-center justify-between h-20">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-2">
+          <img src="./images/FH-logo.png" alt="Logo" class="h-12 w-auto object-contain">
+          <span class="font-parisienne text-lg sm:text-xl font-semibold tracking-wide text-white leading-tight">
+            Fountain Adult Family Home
+          </span>
+        </a>
+
+        <!-- Desktop Links -->
+        <nav class="hidden md:flex flex-1 justify-center space-x-8">
+          <a href="#" class="text-white text-lg font-montserrat font-semibold hover:text-[#CD7241] transition">Home</a>
+          <a href="#special" class="text-white text-lg font-montserrat font-semibold hover:text-[#CD7241] transition">About</a>
+          <a href="#services" class="text-white text-lg font-montserrat font-semibold hover:text-[#CD7241] transition">Services</a>
+          <a href="#team" class="text-white text-lg font-montserrat font-semibold hover:text-[#CD7241] transition">Team</a>
+          <a href="#contact" class="text-white text-lg font-montserrat font-semibold hover:text-[#CD7241] transition">Contact</a>
+        </nav>
+
+        <!-- CTA Button -->
+        <div class="hidden md:block">
+          <a href="#contact" class="bg-[#CD7241] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#e56e3b] transition-all duration-300 shadow-md">
+            Schedule a Tour
+          </a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ✅ Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden px-6 pb-6 bg-white/95 backdrop-blur-md border-t space-y-3">
+    <a href="#" class="block py-2 text-gray-800 hover:text-[#CD7241] font-medium">Home</a>
+    <a href="#special" class="block py-2 text-gray-800 hover:text-[#CD7241] font-medium">About</a>
+    <a href="#services" class="block py-2 text-gray-800 hover:text-[#CD7241] font-medium">Services</a>
+    <a href="#team" class="block py-2 text-gray-800 hover:text-[#CD7241] font-medium">Team</a>
+    <a href="#contact" class="block py-2 text-gray-800 hover:text-[#CD7241] font-medium">Contact</a>
+    <a href="#contact" class="block w-full text-center bg-[#CD7241] text-white px-5 py-2 rounded-full font-semibold hover:bg-[#e56e3b] transition-all duration-300">
+      Schedule a Tour
+    </a>
+  </div>
+</header>
+
+<!-- ✅ JS for Mobile Menu -->
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
+
+
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/+254796419278" 
+  target="_blank"
+  class="fixed bottom-6 left-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-xl transition-transform duration-300 hover:scale-110 z-50"
+  aria-label="Chat on WhatsApp"
+>
+  <!-- WhatsApp Icon -->
+  <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-7 h-7" viewBox="0 0 24 24">
+    <path d="M20.52 3.48A11.82 11.82 0 0012 0C5.37 0 .02 5.35.02 12a11.87 11.87 0 001.62 6.02L0 24l6.23-1.64A11.9 11.9 0 0012 24c6.63 0 12-5.37 12-12 0-3.19-1.24-6.19-3.48-8.52zm-8.52 19a9.8 9.8 0 01-4.93-1.35l-.35-.21-3.7.97.98-3.61-.23-.37A9.84 9.84 0 012.2 12c0-5.4 4.4-9.8 9.8-9.8 2.62 0 5.08 1.02 6.93 2.88A9.73 9.73 0 0122 12c0 5.4-4.4 9.8-9.8 9.8zm5.64-7.34c-.31-.16-1.82-.9-2.1-1-.28-.1-.49-.16-.7.16-.21.31-.8 1-.98 1.21-.18.21-.36.23-.67.08-.31-.16-1.31-.48-2.5-1.53-.92-.82-1.54-1.84-1.72-2.15-.18-.31-.02-.47.13-.62.13-.13.31-.36.46-.54.16-.18.21-.31.31-.52.1-.21.05-.39-.03-.55-.08-.16-.7-1.69-.96-2.31-.25-.6-.5-.52-.7-.53h-.6c-.21 0-.55.08-.84.39s-1.1 1.08-1.1 2.63 1.12 3.05 1.28 3.26c.16.21 2.2 3.36 5.34 4.71.74.32 1.32.51 1.77.65.74.23 1.42.2 1.96.12.6-.09 1.82-.75 2.08-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.21-.59-.37z"/>
+  </svg>
+</a>
+
+
+<!--  Hero Section -->
+<section class="relative h-[90vh] flex items-center">
+  <!-- Background Image -->
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('./images/hero.jpg');">
+    <div class="absolute inset-0 bg-black/40"></div>
+  </div>
+
+  <!-- Hero Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 text-center md:text-left">
+    <h1 class="text-3xl text-white sm:text-5xl lg:text-6xl font-bold font-montserrat leading-tight">
+      A <span class="text-[#FFD0A8]">Warm & Caring</span> Environment<br class="hidden sm:inline"> for Your Loved Ones
+    </h1>
+    <p class="mt-4 text-white/90 text-lg sm:text-xl max-w-2xl font-montserrat mx-auto md:mx-0">
+      Experience personalized care, comfort, and dignity in a welcoming atmosphere designed to feel like home.
+    </p>
+    <div class="mt-6 flex justify-center md:justify-start gap-4 flex-wrap">
+      <a href="#contact" class="inline-block bg-[#CD7241] text-white font-semibold px-8 py-3 rounded-full shadow-md hover:bg-[#e56e3b] transition">
+        Book a Tour
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="relative bg-gradient-to-br from-[#faf7f2] via-[#fffaf5] to-[#f7efe4] py-24 px-6 md:px-12 lg:px-20 overflow-hidden">
+  <!-- Decorative soft blur shapes -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-[#CD7241]/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-0 right-0 w-80 h-80 bg-[#B8860B]/10 rounded-full blur-3xl"></div>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+    <!-- Image Side -->
+    <div class="relative group">
+      <div class="overflow-hidden rounded-[2.5rem] shadow-2xl border-[6px] border-white/80 backdrop-blur-sm">
+        <img
+          src="./images/img8.jpg"
+          alt="About Fountain"
+          class="w-full h-[420px] md:h-[520px] object-cover rounded-[2.5rem] transition-transform duration-700 ease-out group-hover:scale-110"
+        />
+      </div>
+
+      <!-- Fancy Gold Corner Accent -->
+      <div class="absolute -bottom-6 -left-6 w-28 h-28 bg-gradient-to-br from-[#B8860B] to-[#CD7241] rounded-tr-[3rem] shadow-xl"></div>
+    </div>
+
+    <!-- Text Side -->
+    <div class="space-y-6">
+      <h2 class="text-4xl md:text-5xl font-montserrat font-bold text-[#1f1f1f] relative">
+        Our <span class="text-[#CD7241]">Homes</span>
+        
+      </h2>
+
+      <p class="text-gray-700 leading-relaxed text-lg">
+        At Fountain Adult Family Homes, we take pride in providing exceptional, person-centered care in a comfortable and home-like setting. Both of our locations—Fountain 1 in Tacoma and Fountain 2 in Lakewood—are thoughtfully designed to support the daily needs and well-being of our residents.
+      </p>
+
+      <p class="text-gray-700 leading-relaxed text-lg">
+        We offer a wide range of services including personal care, assistance with daily living activities, nutritious home-cooked meals, and individualized support plans tailored to each resident. Our homes are also conveniently located near major hospitals like Tacoma General and St. Joseph, allowing for easy access to specialized medical care whenever needed.
+      </p>
+
+      <button class="mt-6 px-8 py-3.5 bg-gradient-to-r from-[#CD7241] to-[#B8860B] text-white font-semibold rounded-full shadow-lg hover:shadow-xl hover:from-[#b86b2f] hover:to-[#a67600] transition-all duration-300">
+        Learn More
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<!-- Custom clip-path for fancy image shape -->
+<style>
+  .clip-left-fancy {
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+  }
+
+  @media (min-width: 768px) {
+    .clip-left-fancy {
+      clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+    }
+  }
+</style>
+
+<!-- What Makes Us Special Section -->
+<section 
+  class="relative w-full py-20 px-6 font-montserrat bg-cover bg-center bg-fixed"
+  style="background-image: url('images/img18.jpg');"
+  id="special"
+>
+  <!-- Strong Bluish Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0D1B2A]/80 via-[#1B2A5B]/85 to-[#0D1B2A]/90 opacity-95"></div>
+
+  <!-- Content -->
+  <div class="relative max-w-4xl mx-auto text-center text-white z-10">
+    <!-- Accent line -->
+    <div class="w-24 h-1 bg-[#CD7241] mx-auto mb-6 shadow-[0_0_25px_rgba(59,130,246,0.6)]"></div>
+
+    <!-- Title -->
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 drop-shadow-[0_0_15px_rgba(30,58,138,0.8)]">
+      What Makes <span class="text-[#F9A77C]">Us Special</span>
+    </h2>
+
+    <!-- Paragraphs -->
+    <p class="text-lg sm:text-xl leading-relaxed drop-shadow-[0_0_10px_rgba(37,99,235,0.8)] mb-6">
+      At <span class="font-semibold text-[#F9A77C]">Fountain Adult Family Home</span>, 
+      we take pride in creating a welcoming and joyful environment for both male and female residents. What truly makes us special is the vibrant sense of community and the variety of activities that bring our home to life each day.
+    </p>
+
+    <p class="text-lg sm:text-xl leading-relaxed drop-shadow-[0_0_10px_rgba(37,99,235,0.8)] mb-6">
+      From friendly games of bean bags and lively board games to baking delicious cupcakes and cookies together, every moment is an opportunity for connection and fun. Our residents also enjoy light exercises and range-of-motion activities to stay active, along with creative pastimes like puzzles, art books, and card games that stimulate the mind and inspire creativity.
+    </p>
+
+  </div>
+</section>
+
+
+
+
+<!-- Services Section -->
+<section class="relative bg-gradient-to-br from-[] via-white to-[#f7f3ea] py-24 overflow-hidden" id="services">
+  <!-- Curved top shape -->
+  <div class="absolute top-0 left-0 w-full overflow-hidden leading-[0]">
+    <svg class="relative block w-[calc(100%+1.3px)] h-20 md:h-32" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M321.39 56.44C180.74 34.47 68.35 10.83 0 0v120h1200V0c-65.4 12.22-184.03 34.7-321.39 56.44C792.4 80.26 623.88 96.94 465.51 88.71c-89.65-4.64-179.33-19.12-255.49-32.27z" fill="#fff"/>
+    </svg>
+  </div>
+
+  <!-- Decorative SVG -->
+  <svg class="absolute right-0 top-0 w-64 opacity-10 hidden lg:block" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#CD7241" d="M41.3,-71.5C53.6,-62.9,63.4,-53.3,71,-41.4C78.5,-29.5,83.8,-14.8,82.7,-0.3C81.7,14.1,74.4,28.2,65.1,40.2C55.8,52.2,44.4,62.1,31.2,68.4C18,74.6,3,77.3,-10.7,80.3C-24.5,83.3,-37,86.6,-50.7,83.4C-64.4,80.1,-79.2,70.3,-85.3,56.2C-91.4,42.1,-88.8,23.7,-86.4,6.4C-84,-10.8,-81.7,-27,-73.9,-38.5C-66,-50.1,-52.7,-57,-39.3,-65.3C-26,-73.6,-13,-83.2,0.3,-83.6C13.7,-84,27.4,-75.1,41.3,-71.5Z" transform="translate(100 100)" />
+  </svg>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our <span class="text-[#CD7241]">Services</span></h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-14">
+  We provide personalized care—including daily assistance, nutritious meals, housekeeping, and medical support—designed to ensure comfort, dignity, and a true sense of home for every resident.
+    </p>
+
+    <!-- Services Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+  <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/help.png" alt="Personal Care Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+  <h3 class="text-lg font-semibold mb-2 text-gray-800">Personal Care</h3>
+  <p class="text-gray-600 text-md">
+    Our personal care services include compassionate, respectful support with daily needs such as bathing, grooming, dressing, and mobility.
+    
+  </p>
+</div>
+
+
+      <!-- Card 2 -->
+      <div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B8860B]/10 rounded-full">
+           <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/accessibility.png" alt="Personal Care Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Daily Living Assistance</h3>
+        <p class="text-gray-600 text-md">
+           From help with housekeeping, meals, and medication reminders to gentle support with routines and activities, we ensure comfort, independence, and peace of mind every day.</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B8860B]/10 rounded-full">
+           <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/restaurant.png" alt="Restaurant Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Nutritious Meals</h3>
+        <p class="text-gray-600 text-md">We provide nutritious, home-cooked meals thoughtfully prepared to meet each resident’s dietary needs and preferences. 
+          </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B8860B]/10 rounded-full">
+           <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/laundry-basket.png" alt="Personal Care Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Housekeeping & Laundry</h3>
+        <p class="text-gray-600 text-md"> 
+          From regular room tidying to fresh linens and clothing care, we handle every detail so residents can relax and feel truly at home.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B8860B]/10 rounded-full">
+           <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/24-7.png" alt="Personal Care Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">24/7 Supervision</h3>
+        <p class="text-gray-600 text-md">
+           Our dedicated caregivers are always on-site and attentive, offering peace of mind through continuous support and compassionate care day and night.</p>
+      </div>
+
+      <!-- card 6 -->
+      <div class="group bg-white/70 backdrop-blur-md border border-white/40 rounded-3xl shadow-lg hover:shadow-2xl p-8 transition-all hover:-translate-y-2">
+        <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B8860B]/10 rounded-full">
+           <div class="w-16 h-16 mx-auto mb-5 flex items-center justify-center bg-[#B0D9FF]/70 rounded-full">
+    <img src="./images/doctor.png" alt="Personal Care Icon" class="w-8 h-8 object-contain filter drop-shadow-md">
+  </div>
+        </div>
+        <h3 class="text-lg font-semibold mb-2">Medical Supervision</h3>
+        <p class="text-gray-600 text-md"> 
+           With support from visiting doctors, a Nurse Delegator, and on-call specialists, we ensure every resident’s medical needs are met promptly and professionally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-[#0A1D37] py-24 overflow-hidden text-white">
+  <!-- Decorative Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0A1D37] via-[#112B4A] to-[#0A1D37]/90"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+    
+    <!-- Left Side - Title + Description -->
+    <div class="space-y-6">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+        Optional <span class="text-[#CD7241]">Services</span>
+      </h2>
+      <p class="text-gray-300 text-lg leading-relaxed">
+        Enhance your loved one’s care experience with personalized, optional services designed to bring extra comfort, joy, and convenience to daily living.
+      </p>
+      <div class="h-1 w-24 bg-[#CD7241] rounded-full"></div>
+    </div>
+
+    <!-- Right Side - Fancy List -->
+    <div>
+      <ul class="space-y-6">
+        
+        <!-- Item 1 -->
+        <li class="group flex items-start space-x-5 bg-white/10 border border-white/10 backdrop-blur-lg rounded-2xl p-5 shadow-lg hover:shadow-[#B0D9FF]/30 hover:bg-white/20 transition-all duration-300">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="./images/pills.png" alt="Medication Icon" class="w-7 h-7 object-contain drop-shadow-md">
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl text-white mb-1">Medication Management</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">Professional help with administering and remembering medications for consistent wellness.</p>
+          </div>
+        </li>
+
+        <!-- Item 2 -->
+        <li class="group flex items-start space-x-5 bg-white/10 border border-white/10 backdrop-blur-lg rounded-2xl p-5 shadow-lg hover:shadow-[#B0D9FF]/30 hover:bg-white/20 transition-all duration-300">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="./images/transportation.png" alt="Transportation Icon" class="w-7 h-7 object-contain drop-shadow-md">
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl text-white mb-1">Transportation Assistance</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">Safe, reliable help getting to appointments, errands, or community activities.</p>
+          </div>
+        </li>
+
+        <!-- Item 3 -->
+        <li class="group flex items-start space-x-5 bg-white/10 border border-white/10 backdrop-blur-lg rounded-2xl p-5 shadow-lg hover:shadow-[#B0D9FF]/30 hover:bg-white/20 transition-all duration-300">
+          <div class="flex-shrink-0 w-12 h-12 rounded-full bg-white flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <img src="./images/check.png" alt="Recreational Icon" class="w-7 h-7 object-contain drop-shadow-md">
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl text-white mb-1">Social & Recreational Activities</h3>
+            <p class="text-gray-300 text-sm leading-relaxed">From exercise classes to movie nights — helping residents stay active, social, and happy.</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- Gallery Section -->
+<section class="w-full py-20 font-montserrat bg-[#fefaf4]">
+  <!-- Title -->
+  <div class="text-center mb-14 px-4">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-3">
+      <span class="text-[#CD7241]">Explore</span> Our Spaces
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto">
+      A visual journey through our beautiful home — inside and out.
+    </p>
+  </div>
+
+  <!-- Gallery Grid -->
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      
+      <!-- Image Item -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img6.jpg" alt="Interior"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-1">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 2</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img8.jpg" alt="Exterior"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-rotate-1">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 2</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img10.jpg" alt="Garden"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-2">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 2</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img12.jpg" alt="Dining Area"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-rotate-2">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 2</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img14.jpg" alt="Patio"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-3">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 1</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img15.jpg" alt="Bedroom"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-rotate-3">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 1</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img16.jpg" alt="Pool"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-1">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 1</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img17.jpg" alt="Balcony"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-rotate-1">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 1</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img18.jpg" alt="Hallway"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:rotate-2">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 1</span>
+        </div>
+      </div>
+
+      <div class="relative group overflow-hidden rounded-2xl shadow-lg aspect-[4/3]">
+        <img src="images/img7.jpg" alt="Terrace"
+          class="w-full h-full object-cover transition duration-500 group-hover:scale-110 group-hover:-rotate-2">
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-500">
+          <span class="text-white font-semibold text-lg">Fountain AFH 2</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Schedule a Tour Section -->
+<section class="relative w-full h-[80vh] flex items-center justify-center bg-fixed bg-center bg-cover font-montserrat" 
+  style="background-image: url('./images/img14.jpg');">
+  
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0A2342]/90 via-[#0A2342]/80 to-[#12284A]/90"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center max-w-3xl px-6">
+    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+      Schedule a Personal Tour
+    </h2>
+    <p class="text-lg md:text-xl text-gray-100 mb-8 leading-relaxed">
+      Experience the warmth, care, and comfort of Fountain Adult Family Homes firsthand.  
+      Come meet our team, explore our spaces, and feel the difference a true home can make.
+    </p>
+    <a href="#contact" 
+      class="inline-block bg-[#CD7241] hover:bg-[#e87950] text-white text-lg font-semibold px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+      Book Your Visit
+    </a>
+  </div>
+
+</section>
+
+
+<!-- Values Section -->
+ <section 
+  class="relative w-full bg-fixed bg-center bg-cover py-20 px-6 sm:px-10 lg:px-20 text-white" 
+  style="background-image: url('./images/img11.jpg');"
+>
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-[2px]"></div>
+
+  <div class="relative max-w-7xl mx-auto text-center">
+    <!-- Section Title -->
+    <h2 class="text-3xl sm:text-4xl font-bold mb-12">
+      Our <span class="text-[#FFD0A8]">Philosophy & Values</span>
+    </h2>
+
+    <!-- Three Horizontal Paragraphs -->
+    <div class="flex flex-col md:flex-row justify-center items-start gap-10 lg:gap-16">
+      
+      <!-- Item 1 -->
+      <div class="flex-1 max-w-md mx-auto md:mx-0 text-center">
+        <div class="flex justify-center mb-5">
+          <div class="w-16 h-16 flex items-center justify-center bg-[#CD7241] rounded-full shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zM12 14c-3.314 0-6 2.686-6 6v2h12v-2c0-3.314-2.686-6-6-6z" />
+            </svg>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg leading-relaxed">
+          Personalized, compassionate, professional and dedicated Care.
+          We treat every resident like family—honoring their individuality, supporting their well-being, and ensuring they feel truly at home.
+        </p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="flex-1 max-w-md mx-auto md:mx-0 text-center">
+        <div class="flex justify-center mb-5">
+          <div class="w-16 h-16 flex items-center justify-center bg-[#CD7241] rounded-full shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg leading-relaxed">
+          A sense of family and belonging in a cozy home-like environment.
+          Our residents share meals, stories, and smiles together — creating genuine connections that make every day feel like living among family.
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="flex-1 max-w-md mx-auto md:mx-0 text-center">
+        <div class="flex justify-center mb-5">
+          <div class="w-16 h-16 flex items-center justify-center bg-[#CD7241] rounded-full shadow-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7l9 6 9-6-9-4-9 4zm0 0v10l9 4 9-4V7" />
+            </svg>
+          </div>
+        </div>
+        <p class="text-base sm:text-lg leading-relaxed">
+          Individualized attention due to the small size of the community.
+          Every resident is truly known — their routines, preferences, and stories matter, allowing us to provide care that feels personal and deeply attentive
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Meals Section -->
+<section class="relative py-20 bg-[#faf9f6] font-montserrat overflow-hidden">
+  <div class="max-w-6xl mx-auto px-4 md:px-8 text-center">
+    <h2 class="text-3xl md:text-5xl font-montserrat font-bold text-[#CD7241] mb-4">Meal <span class="text-gray-700">Offerings</span></h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-10 font-montserrat">
+      Every meal we serve is made with care, using fresh and healthy ingredients to keep our residents strong, happy, and well-nourished. Discover the warmth and goodness behind every dish.
+    </p>
+
+    <!-- Tabs -->
+    <div class="flex flex-wrap justify-center gap-2 md:gap-3 mb-12">
+      <button onclick="showMealTab(0)" class="meal-tab active px-4 py-2 rounded-full bg-[#CD7241] text-white font-semibold hover:bg-[#a37a08] transition">Healthy</button>
+      <button onclick="showMealTab(1)" class="meal-tab px-4 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-[#CD7241] hover:text-white transition">Fresh</button>
+      <button onclick="showMealTab(2)" class="meal-tab px-4 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-[#CD7241] hover:text-white transition">Balanced</button>
+      <button onclick="showMealTab(3)" class="meal-tab px-4 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-[#CD7241] hover:text-white transition">Locally Sourced</button>
+      <button onclick="showMealTab(4)" class="meal-tab px-4 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-[#CD7241] hover:text-white transition">Delicious</button>
+      <button onclick="showMealTab(5)" class="meal-tab px-4 py-2 rounded-full bg-gray-200 text-gray-800 font-semibold hover:bg-[#CD7241] hover:text-white transition">Customizable</button>
+    </div>
+
+    <!-- Panels -->
+    <div class="relative w-full mx-auto ">
+      <!-- Healthy -->
+      <div class="meal-panel block transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="images/healthy.jpg" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-semibold  font-montserrat text-[#CD7241] mb-4">Healthy</h3>
+            <p class="text-gray-600 leading-relaxed font-montserrat">
+              Our meals are carefully prepared with balanced nutrition in mind — ensuring each plate supports wellbeing, vitality, and strength.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fresh -->
+      <div class="meal-panel hidden transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=900&q=80" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-montserrat font-semibold text-[#CD7241] mb-4">Fresh</h3>
+            <p class="text-gray-600 leading-relaxed font-montserrat">
+              Every dish is made from fresh, high-quality ingredients sourced daily to preserve natural flavor and nutrients.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Balanced -->
+      <div class="meal-panel hidden transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="images/balanced.jpg" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-semibold text-[#CD7241] font-montserrat mb-4">Balanced</h3>
+            <p class="text-gray-600 leading-relaxed font-montserrat">
+              We serve perfectly portioned meals that include proteins, fibers, and vitamins to promote a balanced lifestyle.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Locally Sourced -->
+      <div class="meal-panel hidden transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="images/sourced.jpg" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-montserrat text-[#CD7241] mb-4 font-semibold">Locally Sourced</h3>
+            <p class="text-gray-600 leading-relaxed font-montserrat">
+              We support our community by using local farmers’ produce — bringing you meals that are fresh, ethical, and sustainable.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delicious -->
+      <div class="meal-panel hidden transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?auto=format&fit=crop&w=900&q=80" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-montserrat text-[#CD7241] mb-4 font-semibold">Delicious</h3>
+            <p class="text-gray-600  font-montserrat leading-relaxed">
+              Every meal is a delightful experience — full of flavor, color, and texture designed to make dining joyful and satisfying.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Customizable -->
+      <div class="meal-panel hidden transition-all duration-500 ease-in-out">
+        <div class="flex flex-col md:flex-row items-center gap-8">
+          <img src="images/customizable.jpg" 
+               class="w-full md:w-1/2 h-64 object-cover rounded-3xl shadow-xl">
+          <div class="text-left md:w-1/2">
+            <h3 class="text-3xl font-semibold text-[#CD7241] mb-4">Customizable</h3>
+            <p class="text-gray-600 leading-relaxed font-montserrat">
+              Our menu is flexible to meet your dietary preferences, whether vegetarian, diabetic-friendly, or gluten-free.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showMealTab(index) {
+    const panels = document.querySelectorAll('.meal-panel');
+    const tabs = document.querySelectorAll('.meal-tab');
+    panels.forEach((panel, i) => {
+      panel.classList.toggle('hidden', i !== index);
+      panel.classList.toggle('block', i === index);
+    });
+    tabs.forEach((tab, i) => {
+      if (i === index) {
+        tab.classList.add('bg-[#CD7241]', 'text-white');
+        tab.classList.remove('bg-gray-200', 'text-gray-800');
+      } else {
+        tab.classList.remove('bg-[#CD7241]', 'text-white');
+        tab.classList.add('bg-gray-200', 'text-gray-800');
+      }
+    });
+  }
+</script>
+
+<section class="relative bg-[#0A1A2F] py-24 overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-b from-[#0A1A2F] via-[#0F2340] to-[#0A1A2F] opacity-95"></div>
+
+  <div class="relative container mx-auto px-6 lg:px-12">
+    
+
+    <!-- Founder Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
+      <!-- Image -->
+      <div class="relative w-full h-[450px] group">
+        <div class="absolute -top-6 -left-6 w-full h-full bg-[#F9A66C]/20 rounded-3xl transform rotate-2 group-hover:rotate-3 transition duration-300 ease-in-out"></div>
+        <img
+          src="images/founder2.jpg"
+          alt="Founder"
+          class="w-full h-full object-cover rounded-3xl shadow-2xl relative z-10"
+        />
+      </div>
+
+      <!-- Text -->
+      <div class="text-gray-200">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Meet Our Founder</h2>
+        <p class="text-[#F9A66C] font-semibold uppercase tracking-wider mb-4">
+          Visionary • Leader • Caregiver
+        </p>
+        <p class="leading-relaxed mb-6 text-gray-300">
+          My name is Alice, and I have been proudly serving in this field for over 10 years. Our journey began with Fountain 1 Adult Family Home in Tacoma, which has provided compassionate care for nearly a decade. In March 2024, we expanded our mission by opening Fountain 2 Adult Family Home in Lakewood.
+          <br><br>
+          At both homes, we are an all-female team, dedicated to creating a warm, safe, and nurturing environment for our residents. We typically have two experienced female caregivers on site, ensuring personalized attention and consistent support throughout the day.
+          <br><br>
+          My passion for this work comes from a deeply personal place—a lifelong desire to help others and enhance their quality of life. Caregiving, for me, is more than a profession; it’s a calling. The most rewarding part of what we do is seeing the difference we make every day in the lives of our residents and their families.
+          <br><br>
+          At Fountain Homes, we believe in treating everyone with dignity, respect, and genuine care—just like family.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block px-6 py-3 bg-[#F9A66C] text-[#0A1A2F] font-semibold rounded-lg shadow-lg hover:bg-[#e68e53] transition duration-300"
+        >
+          Get in Touch
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Team Section -->
+<section class="bg-gradient-to-b from-[#fdfaf5] via-[#faf7f2] to-[#f3eee6] py-24 font-sans relative overflow-hidden" id="team">
+  <div class="max-w-7xl mx-auto px-6 text-center relative z-10">
+    <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+      Our <span class="text-[#CD7241]">Amazing Team</span>
+    </h2>
+    <p class="text-gray-600 max-w-2xl mx-auto mb-16 text-lg">
+      Compassion, experience, and dedication define our caregivers. Each member brings warmth,
+      professionalism, and a heartfelt touch that makes Fountain truly feel like home.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+      <!-- Team Member -->
+      <div class="group bg-white/90 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+        <div class="relative w-40 h-40 mx-auto mb-6">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#CD7241] via-[#FFD0A8] to-[#CD7241] blur-md opacity-30 group-hover:opacity-60 transition"></div>
+          <img src="./images/founder2.jpg" alt="Team Member 1"
+            class="relative w-full h-full object-cover rounded-full border-[6px] border-white shadow-md group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Alice Kagundah</h3>
+        <p class="text-[#CD7241] font-medium mb-3">Founder & Administrator</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          With over a decade of experience in senior care, Alice leads with heart and a deep sense of purpose.
+        </p>
+        <div class="flex justify-center space-x-4 text-[#CD7241] text-xl">
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member -->
+      <div class="group bg-white/90 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+        <div class="relative w-40 h-40 mx-auto mb-6">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#CD7241] via-[#FFD0A8] to-[#CD7241] blur-md opacity-30 group-hover:opacity-60 transition"></div>
+          <img src="" alt="Team Member 2"
+            class="relative w-full h-full object-cover rounded-full border-[6px] border-white shadow-md group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Catherine Kagundah</h3>
+        <p class="text-[#CD7241] font-medium mb-3"></p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          
+        </p>
+        <div class="flex justify-center space-x-4 text-[#CD7241] text-xl">
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member -->
+      <div class="group bg-white/90 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+        <div class="relative w-40 h-40 mx-auto mb-6">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#CD7241] via-[#FFD0A8] to-[#CD7241] blur-md opacity-30 group-hover:opacity-60 transition"></div>
+          <img src="" alt="Team Member 3"
+            class="relative w-full h-full object-cover rounded-full border-[6px] border-white shadow-md group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">Grace </h3>
+        <p class="text-[#CD7241] font-medium mb-3">Care Coordinator</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+         
+        </p>
+        <div class="flex justify-center space-x-4 text-[#CD7241] text-xl">
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <!-- Team Member -->
+      <div class="group bg-white/90 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 p-6 hover:-translate-y-2 border border-white/50 backdrop-blur-sm">
+        <div class="relative w-40 h-40 mx-auto mb-6">
+          <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-[#CD7241] via-[#FFD0A8] to-[#CD7241] blur-md opacity-30 group-hover:opacity-60 transition"></div>
+          <img src="" alt="Team Member 4"
+            class="relative w-full h-full object-cover rounded-full border-[6px] border-white shadow-md group-hover:scale-105 transition duration-500">
+        </div>
+        <h3 class="text-2xl font-semibold text-gray-800 mb-1">John Otieno</h3>
+        <p class="text-[#CD7241] font-medium mb-3">Recreational Specialist</p>
+        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+          
+        </p>
+        <div class="flex justify-center space-x-4 text-[#CD7241] text-xl">
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="hover:text-gray-700 transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Contact Section -->
+<section class="py-24 bg-gradient-to-br from-[#faf9f6] via-white to-[#f2efe9] font-montserrat" id="contact">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <h2 class="text-5xl font-bold text-[#CD7241] mb-3">Reach Out</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        We’re always here to listen, support, and help. Whether you’d like to learn more about our homes or schedule a visit, we’d love to hear from you.
+      </p>
+      <div class="w-20 h-1 bg-[#CD7241] mx-auto mt-4 rounded-full"></div>
+    </div>
+
+    <!-- Contact Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-stretch">
+
+      <!-- Contact Form -->
+      <div class="bg-white rounded-3xl shadow-2xl p-8 lg:p-10 border border-gray-100 transition hover:shadow-[#b8860b40]">
+        <h3 class="text-3xl font-semibold text-gray-800 mb-2">Get In Touch</h3>
+        <p class="text-gray-500 mb-8">Fill out the form below and our team will get back to you as soon as possible.</p>
+
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-sm font-semibold text-gray-700 mb-2">Full Name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Jane Doe"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:outline-none"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:outline-none"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+            <textarea
+              id="message"
+              rows="5"
+              placeholder="Type your message here..."
+              class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#B8860B] focus:outline-none"
+              required
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full py-3 bg-[#CD7241] hover:bg-[#a37a08] text-white font-semibold rounded-lg shadow-md hover:shadow-lg transition duration-300"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+
+      <!-- Dual Locations -->
+      <div class="grid grid-rows-2 gap-8">
+        
+        <!-- Location 1 -->
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden transition hover:shadow-[#b8860b40]">
+          <div class="p-6">
+            <h4 class="text-2xl font-semibold text-gray-800 mb-1">Fountain 1 — Tacoma</h4>
+            <p class="text-gray-500 mb-4">Fountain AFH address is 1908 E 63rd Street Tacoma WA 98404</p>
+          </div>
+          <div class="h-56 w-full">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1760391011933!6m8!1m7!1sOdVW0FQzU1LZP6hqKzCRAQ!2m2!1d47.1998989506967!2d-122.4034693655395!3f179.8508686319369!4f-5.68104496603695!5f1.4676709133685395" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <!-- Location 2 -->
+        <div class="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden transition hover:shadow-[#b8860b40]">
+          <div class="p-6">
+            <h4 class="text-2xl font-semibold text-gray-800 mb-1">Fountain 2 — Lakewood</h4>
+            <p class="text-gray-500 mb-4">Fountain AFH address is 7405 95th Ave SW Lakewood WA 98498</p>
+          </div>
+          <div class="h-56 w-full">
+            <iframe src="https://www.google.com/maps/embed?pb=!4v1760391275697!6m8!1m7!1s94qAA9F0C30grsZ0lG-HLA!2m2!1d47.18998053817381!2d-122.5624868943284!3f115.83287498522265!4f-2.748288444817632!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+ <footer class="bg-[#1a1a1a] text-gray-300 pt-16 pb-8 relative overflow-hidden">
+  <!-- Decorative Overlay -->
+  <div class="absolute inset-0 bg-[url('./images/img12.jpg')] bg-cover bg-center opacity-10"></div>
+  <div class="relative z-10 container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+
+    <!-- About -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4">Fountain Adult FH</h2>
+      <p class="text-sm leading-relaxed">
+        Fountain is a warm, caring home dedicated to providing compassionate assisted living and personalized support for every resident.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4">Quick Links</h2>
+      <ul class="space-y-2">
+        <li><a href="#" class="hover:text-white transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-white transition">About Us</a></li>
+        <li><a href="services.html" class="hover:text-white transition">Services</a></li>
+        <li><a href="team.html" class="hover:text-white transition">Our Team</a></li>
+        <li><a href="#contact" class="hover:text-white transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4">Our Services</h2>
+      <ul class="space-y-2">
+        <li>Personal Care</li>
+        <li>Daily Living Assistance</li>
+        <li>Transport Assistance</li>
+        <li>Meals & Nutrition</li>
+        <li>Medical Supervision</li>
+      </ul>
+    </div>
+
+    <!-- Social -->
+    <div>
+      <h2 class="text-xl font-bold text-white mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="#" class="hover:text-white transition" aria-label="Facebook">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M22 12c0-5.522-4.478-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.988H7.898v-2.89h2.54V9.797c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.465h-1.26c-1.243 0-1.63.772-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-white transition" aria-label="Instagram">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M7.75 2A5.75 5.75 0 002 7.75v8.5A5.75 5.75 0 007.75 22h8.5A5.75 5.75 0 0022 16.25v-8.5A5.75 5.75 0 0016.25 2h-8.5zM12 7a5 5 0 110 10 5 5 0 010-10zm6.25.5a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z"/>
+          </svg>
+        </a>
+        <a href="#" class="hover:text-white transition" aria-label="LinkedIn">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M4.98 3.5a2.5 2.5 0 11-.001 5.001A2.5 2.5 0 014.98 3.5zM3 9h4v12H3zM9 9h3.6v1.8h.05a4 4 0 013.6-2c3.85 0 4.55 2.53 4.55 5.82V21h-4v-5.2c0-1.24-.02-2.84-1.73-2.84-1.74 0-2.01 1.36-2.01 2.75V21H9z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="relative z-10 mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-500">
+    © 2025 Fountain Adult FH. All rights reserved.
+  </div>
+</footer>
+
+</body>
+</html>
